@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -71,12 +70,22 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+
+        .tool-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body class="gradient-bg min-h-screen overflow-hidden">
     <!-- Progress Bar -->
     <div class="fixed top-0 left-0 w-full h-1 bg-white/20 z-50">
-        <div id="progress" class="progress-bar h-full bg-white" style="width: 14.28%"></div>
+        <div id="progress" class="progress-bar h-full bg-white" style="width: 6.25%"></div>
     </div>
 
     <!-- Main Container -->
@@ -94,7 +103,7 @@
                         en la Vida, el Trabajo y la Educación
                     </h2>
                     <div class="text-xl text-white/80 font-medium">
-                        Creando • Automatizando • Reflexionando
+                        •Creando • Automatizando • Reflexionando
                     </div>
                 </div>
             </div>
@@ -249,7 +258,305 @@
                 </div>
             </div>
 
-            <!-- Slide 7: Reflexiones y Futuro -->
+            <!-- Slide 7: Conversación y Texto -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">💬 Conversación y Texto</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- ChatGPT -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://chat.openai.com', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">ChatGPT</h3>
+                            <p class="text-white/80 text-sm mb-4">Conversación inteligente y generación de texto avanzada</p>
+                            <div class="text-blue-300 text-xs">chat.openai.com</div>
+                        </div>
+
+                        <!-- DeepSeek -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://chat.deepseek.com/', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-purple-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">DeepSeek</h3>
+                            <p class="text-white/80 text-sm mb-4">IA conversacional avanzada con capacidades de razonamiento</p>
+                            <div class="text-blue-300 text-xs">chat.deepseek.com</div>
+                        </div>
+
+                        <!-- Perplexity AI -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://perplexity.ai', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Perplexity AI</h3>
+                            <p class="text-white/80 text-sm mb-4">Motor de búsqueda con IA y respuestas precisas</p>
+                            <div class="text-blue-300 text-xs">perplexity.ai</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Escritura y Marketing -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">✍️ Escritura y Marketing</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Jasper -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://jasper.ai', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-red-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Jasper</h3>
+                            <p class="text-white/80 text-sm mb-4">Creación de contenido profesional para marketing</p>
+                            <div class="text-blue-300 text-xs">jasper.ai</div>
+                        </div>
+
+                        <!-- Copy.ai -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://copy.ai', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-orange-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Copy.ai</h3>
+                            <p class="text-white/80 text-sm mb-4">Generación de textos publicitarios y marketing</p>
+                            <div class="text-blue-300 text-xs">copy.ai</div>
+                        </div>
+
+                        <!-- Grammarly -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-6 text-center" onclick="window.open('https://grammarly.com', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Grammarly</h3>
+                            <p class="text-white/80 text-sm mb-4">Corrección gramatical y mejora de escritura</p>
+                            <div class="text-blue-300 text-xs">grammarly.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Diseño y Creatividad -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">🎨 Diseño y Creatividad</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Canva -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://canva.com', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.5 7.5A1.5 1.5 0 0 1 9 6h6a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 15 18H9a1.5 1.5 0 0 1-1.5-1.5v-9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Canva</h3>
+                            <p class="text-white/80 mb-6">Diseño gráfico profesional con herramientas de IA integradas</p>
+                            <div class="text-blue-300 text-sm">canva.com</div>
+                        </div>
+
+                        <!-- MidJourney -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://midjourney.com', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-purple-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l2.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">MidJourney</h3>
+                            <p class="text-white/80 mb-6">Generación de imágenes artísticas de alta calidad con IA</p>
+                            <div class="text-blue-300 text-sm">midjourney.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Video y Audio -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-8">
+                    <h2 class="text-3xl font-bold text-white mb-6 text-center">🎥 Video y Audio</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Runway -->
+                        <div class="tool-card bg-white/10 rounded-xl p-6 text-center" onclick="window.open('https://runwayml.com', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-green-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm10 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Runway</h3>
+                            <p class="text-white/80 text-sm mb-3">Edición de video y efectos con IA</p>
+                            <div class="text-blue-300 text-xs">runwayml.com</div>
+                        </div>
+
+                        <!-- Sora -->
+                        <div class="tool-card bg-white/10 rounded-xl p-6 text-center" onclick="window.open('https://openai.com/sora', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-red-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Sora</h3>
+                            <p class="text-white/80 text-sm mb-3">Generación de videos realistas con IA</p>
+                            <div class="text-blue-300 text-xs">openai.com/sora</div>
+                        </div>
+
+                        <!-- Descript -->
+                        <div class="tool-card bg-white/10 rounded-xl p-6 text-center" onclick="window.open('https://descript.com', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-blue-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Descript</h3>
+                            <p class="text-white/80 text-sm mb-3">Edición de audio y video por texto</p>
+                            <div class="text-blue-300 text-xs">descript.com</div>
+                        </div>
+
+                        <!-- Pictory -->
+                        <div class="tool-card bg-white/10 rounded-xl p-6 text-center" onclick="window.open('https://pictory.ai', '_blank')">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Pictory</h3>
+                            <p class="text-white/80 text-sm mb-3">Creación de videos a partir de texto</p>
+                            <div class="text-blue-300 text-xs">pictory.ai</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Avatares y Presentaciones -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">👤 Avatares y Presentaciones</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- HeyGen -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://heygen.com', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-pink-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">HeyGen</h3>
+                            <p class="text-white/80 mb-6">Avatares de IA para videos personalizados y presentaciones</p>
+                            <div class="text-blue-300 text-sm">heygen.com</div>
+                        </div>
+
+                        <!-- Synthesia -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://synthesia.io', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Synthesia</h3>
+                            <p class="text-white/80 mb-6">Videos profesionales con avatares virtuales realistas</p>
+                            <div class="text-blue-300 text-sm">synthesia.io</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Productividad -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-3xl font-bold text-white mb-8 text-center">⚡ Productividad</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Notion AI -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://notion.so', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-gray-300" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Notion AI</h3>
+                            <p class="text-white/80 mb-6">Asistente de IA para organización, notas y productividad</p>
+                            <div class="text-blue-300 text-sm">notion.so</div>
+                        </div>
+
+                        <!-- HubSpot -->
+                        <div class="tool-card bg-white/10 rounded-2xl p-8 text-center" onclick="window.open('https://hubspot.com', '_blank')">
+                            <div class="mb-6">
+                                <svg class="w-20 h-20 mx-auto text-orange-400" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">HubSpot</h3>
+                            <p class="text-white/80 mb-6">CRM y marketing automation potenciado con IA</p>
+                            <div class="text-blue-300 text-sm">hubspot.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Nuevas Profesiones con IA - Parte 1 -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">🚀 Nuevas Profesiones con IA - Parte 1</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">🤖</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Ingeniero de Prompts</h3>
+                            <p class="text-white/80 text-lg">Especialista en optimizar instrucciones para IA y crear prompts efectivos</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">🔍</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Auditor de IA</h3>
+                            <p class="text-white/80 text-lg">Evalúa sesgos, ética y transparencia en sistemas de inteligencia artificial</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">🎨</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Diseñador IA-Humano</h3>
+                            <p class="text-white/80 text-lg">Crea experiencias colaborativas e interfaces entre IA y usuarios</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">📊</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Científico de Datos IA</h3>
+                            <p class="text-white/80 text-lg">Entrena, optimiza y desarrolla modelos de machine learning avanzados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Nuevas Profesiones con IA - Parte 2 -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">🚀 Nuevas Profesiones con IA - Parte 2</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">🎓</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Entrenador de IA</h3>
+                            <p class="text-white/80 text-lg">Enseña habilidades específicas y conocimientos a sistemas de IA</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">⚖️</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Abogado de IA</h3>
+                            <p class="text-white/80 text-lg">Especialista en regulaciones, derechos y aspectos legales de la IA</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">🧠</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Psicólogo de IA</h3>
+                            <p class="text-white/80 text-lg">Estudia comportamiento, interacción y impacto psicológico de la IA</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-8 text-center">
+                            <div class="text-6xl mb-6">💼</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Consultor en Transformación IA</h3>
+                            <p class="text-white/80 text-lg">Ayuda a empresas a adoptar e integrar tecnologías de IA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Reflexiones y Futuro -->
             <div class="slide">
                 <div class="glass-effect rounded-3xl p-10">
                     <h2 class="text-4xl font-bold text-white mb-8 text-center">Reflexiones sobre el Futuro</h2>
@@ -300,6 +607,30 @@
                 </div>
             </div>
 
+            <!-- Slide 16: Gracias -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-12 text-center">
+                    <div class="icon-float text-8xl mb-8">🙏</div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                        ¡Gracias!
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-white/90 mb-8 font-light">
+                        Por su atención y participación
+                    </h2>
+                    <div class="space-y-4 text-white/80 text-lg">
+                        <p>La IA está transformando nuestro mundo</p>
+                        <p>El futuro se construye hoy</p>
+                        <p class="text-2xl font-semibold text-white mt-8">¡Sigamos aprendiendo juntos! 🚀</p>
+                    </div>
+                    <div class="mt-12 flex justify-center space-x-8 text-4xl">
+                        <span class="icon-float">🤖</span>
+                        <span class="icon-float" style="animation-delay: 0.5s;">💡</span>
+                        <span class="icon-float" style="animation-delay: 1s;">🌟</span>
+                        <span class="icon-float" style="animation-delay: 1.5s;">🚀</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -311,14 +642,23 @@
             </svg>
         </button>
         
-        <div class="flex space-x-2">
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer active" onclick="goToSlide(0)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(1)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(2)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(3)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(4)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(5)"></div>
-            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(6)"></div>
+        <div class="flex space-x-1">
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer active" onclick="goToSlide(0)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(1)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(2)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(3)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(4)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(5)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(6)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(7)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(8)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(9)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(10)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(11)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(12)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(13)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(14)"></div>
+            <div class="nav-dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(15)"></div>
         </div>
         
         <button onclick="nextSlide()" class="text-white hover:text-blue-300 transition-colors p-2">
@@ -330,12 +670,12 @@
 
     <!-- Slide Counter -->
     <div class="fixed top-8 right-8 glass-effect rounded-full px-4 py-2 text-white font-medium">
-        <span id="current-slide">1</span> / 7
+        <span id="current-slide">1</span> / 16
     </div>
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 7;
+        const totalSlides = 16;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.nav-dot');
 
@@ -382,5 +722,5 @@
         // Auto-advance (optional - uncomment to enable)
         // setInterval(nextSlide, 10000); // 10 seconds per slide
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d44a70f3d86dfd',t:'MTc1MjE5NDg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d5e9c0001f6dec',t:'MTc1MjIxMTg3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
