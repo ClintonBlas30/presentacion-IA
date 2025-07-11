@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA en la Vida, Trabajo y Educación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .slide {
+            display: none;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .icon-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+        
+        .nav-dot {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen overflow-hidden">
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-white/20 z-50">
+        <div id="progress" class="progress-bar h-full bg-white" style="width: 14.28%"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="max-w-6xl w-full">
+            
+            <!-- Slide 1: Título -->
+            <div class="slide active text-center">
+                <div class="glass-effect rounded-3xl p-12 mb-8">
+                    <div class="icon-float text-8xl mb-6">🤖</div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                        Inteligencia Artificial
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-white/90 mb-8 font-light">
+                        en la Vida, el Trabajo y la Educación
+                    </h2>
+                    <div class="text-xl text-white/80 font-medium">
+                        Creando • Automatizando • Reflexionando
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Introducción -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 class="text-4xl font-bold text-white mb-6">¿Qué es la IA?</h2>
+                            <p class="text-xl text-white/90 mb-6 leading-relaxed">
+                                La Inteligencia Artificial es la capacidad de las máquinas para realizar tareas que tradicionalmente requieren inteligencia humana.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-2xl">🧠</span>
+                                    <span class="text-white/80">Aprendizaje automático</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-2xl">💬</span>
+                                    <span class="text-white/80">Procesamiento de lenguaje</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-2xl">👁️</span>
+                                    <span class="text-white/80">Visión computacional</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-9xl icon-float">🎯</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: IA en la Vida Cotidiana -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">IA en la Vida Cotidiana</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="feature-card bg-white/10 rounded-2xl p-6 text-center">
+                            <div class="text-5xl mb-4">📱</div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Asistentes Virtuales</h3>
+                            <p class="text-white/80">Siri, Alexa, Google Assistant nos ayudan diariamente</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-6 text-center">
+                            <div class="text-5xl mb-4">🎵</div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Recomendaciones</h3>
+                            <p class="text-white/80">Spotify, Netflix, YouTube personalizan contenido</p>
+                        </div>
+                        <div class="feature-card bg-white/10 rounded-2xl p-6 text-center">
+                            <div class="text-5xl mb-4">🚗</div>
+                            <h3 class="text-xl font-semibold text-white mb-3">Transporte</h3>
+                            <p class="text-white/80">GPS inteligente y vehículos autónomos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: IA en el Trabajo -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">IA Transformando el Trabajo</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-white/10 rounded-xl p-6">
+                                <h3 class="text-2xl font-semibold text-white mb-3">✨ Automatización</h3>
+                                <p class="text-white/80">Tareas repetitivas se automatizan, liberando tiempo para creatividad</p>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-6">
+                                <h3 class="text-2xl font-semibold text-white mb-3">📊 Análisis de Datos</h3>
+                                <p class="text-white/80">Insights instantáneos de grandes volúmenes de información</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-white/10 rounded-xl p-6">
+                                <h3 class="text-2xl font-semibold text-white mb-3">🎨 Creación de Contenido</h3>
+                                <p class="text-white/80">Generación de textos, imágenes y código asistida por IA</p>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-6">
+                                <h3 class="text-2xl font-semibold text-white mb-3">🤝 Colaboración</h3>
+                                <p class="text-white/80">IA como copiloto en decisiones y procesos creativos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: IA en la Educación -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">IA Revolucionando la Educación</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-3xl">🎯</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Aprendizaje Personalizado</h3>
+                                        <p class="text-white/80">Adaptación al ritmo y estilo de cada estudiante</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-3xl">💡</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Tutores Virtuales</h3>
+                                        <p class="text-white/80">Asistencia 24/7 para resolver dudas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-3xl">📈</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Evaluación Inteligente</h3>
+                                        <p class="text-white/80">Feedback inmediato y análisis de progreso</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-9xl icon-float">🎓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Creando con IA -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">Creando con IA</h2>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">🎨</div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Arte Digital</h3>
+                            <p class="text-white/70 text-sm">DALL-E, Midjourney, Stable Diffusion</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">✍️</div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Escritura</h3>
+                            <p class="text-white/70 text-sm">ChatGPT, Claude, Jasper</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">🎵</div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Música</h3>
+                            <p class="text-white/70 text-sm">AIVA, Amper, Soundraw</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">💻</div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Código</h3>
+                            <p class="text-white/70 text-sm">GitHub Copilot, Replit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Reflexiones y Futuro -->
+            <div class="slide">
+                <div class="glass-effect rounded-3xl p-10">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center">Reflexiones sobre el Futuro</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4 text-green-300">✅ Oportunidades</h3>
+                            <ul class="space-y-3 text-white/80">
+                                <li class="flex items-center space-x-3">
+                                    <span>🚀</span>
+                                    <span>Mayor productividad y eficiencia</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>🎯</span>
+                                    <span>Soluciones personalizadas</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>🌍</span>
+                                    <span>Democratización del conocimiento</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>💡</span>
+                                    <span>Nuevas formas de creatividad</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white mb-4 text-yellow-300">⚠️ Desafíos</h3>
+                            <ul class="space-y-3 text-white/80">
+                                <li class="flex items-center space-x-3">
+                                    <span>🔒</span>
+                                    <span>Privacidad y seguridad</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>⚖️</span>
+                                    <span>Consideraciones éticas</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>💼</span>
+                                    <span>Impacto en el empleo</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <span>🎓</span>
+                                    <span>Necesidad de adaptación</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="fixed bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 glass-effect rounded-full px-6 py-3">
+        <button onclick="previousSlide()" class="text-white hover:text-blue-300 transition-colors p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        
+        <div class="flex space-x-2">
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer active" onclick="goToSlide(0)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(1)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(2)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(3)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(4)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(5)"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer" onclick="goToSlide(6)"></div>
+        </div>
+        
+        <button onclick="nextSlide()" class="text-white hover:text-blue-300 transition-colors p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="fixed top-8 right-8 glass-effect rounded-full px-4 py-2 text-white font-medium">
+        <span id="current-slide">1</span> / 7
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 7;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.nav-dot');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = n;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            
+            // Update progress bar
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+            
+            // Update slide counter
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Auto-advance (optional - uncomment to enable)
+        // setInterval(nextSlide, 10000); // 10 seconds per slide
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d44a70f3d86dfd',t:'MTc1MjE5NDg2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
